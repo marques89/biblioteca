@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Biblioteca
+namespace Biblioteca.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +24,36 @@ namespace Biblioteca
         public MainWindow()
         {
             InitializeComponent();
+
+            ////Preencher GRID
+            //grdObra.ItemsSource = ObraDAO.BuscarObra();
+
+            ////Preencher COMBO BOX
+            //cboObra.ItemsSource = ObraDAO.BuscarObra();
+            //cboObra.DisplayMemberPath = "ObraTitulo";
+            //cboObra.SelectedValuePath = "ObraId";
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (MessageBox.Show("Deseja sair?", "Saindo...",
+                MessageBoxButton.YesNo, MessageBoxImage.Question) ==
+                MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void menuAdicionarObra_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarObra frmAdicionarObra = new frmAdicionarObra();
+            frmAdicionarObra.ShowDialog();
+        }
+
+        private void menuAdicionarAutor_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarAutor frmAdicionarAutor = new frmAdicionarAutor();
+            frmAdicionarAutor.ShowDialog();
         }
     }
 }

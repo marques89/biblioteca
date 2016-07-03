@@ -1,8 +1,41 @@
-﻿<Window x:Class="Biblioteca.MainWindow"
+﻿<Window x:Class="Biblioteca.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Cidadela" Height="350" Width="525" Background="#FFE8E3E3" Closing="Window_Closing">
     <Grid>
-        
+        <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="517" Background="#FFBBB4B4">
+            <Separator Width="15" />
+            <MenuItem Header="Obra" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Right" HorizontalAlignment="Center" >
+                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140">
+                    <MenuItem x:Name="menuPesquisarObra" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem x:Name="menuAdicionarObra" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarAutor_Click"/>
+                    <MenuItem x:Name="menuAlterarObra" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem x:Name="menuRemoverObra" Header="Remover" HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+                <MenuItem Header="Retirada" HorizontalAlignment="Left" Width="140"/>
+                <MenuItem Header="Devolução" HorizontalAlignment="Left" Width="140"/>
+            </MenuItem>
+            <Separator Width="15" />
+            <MenuItem Header="Autor" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140">
+                    <MenuItem x:Name="menuPesquisarAutor" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem x:Name="menuAdicionarAutor" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarAutor_Click"/>
+                    <MenuItem x:Name="menuAlterarAutor" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem x:Name="menuRemoverAutor" Header="Remover" HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+            </MenuItem>
+            <Separator Width="15" />
+            <MenuItem Header="Editora" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140" VerticalAlignment="Top">
+                    <MenuItem x:Name="menuPesquisarEditora" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem x:Name="menuAdicionarEditora" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarObra_Click"/>
+                    <MenuItem x:Name="menuAlterarEditora" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
+                    <MenuItem x:Name="menuRemoverEditora" Header="Remover" HorizontalAlignment="Left" Width="140"/>
+                </MenuItem>
+            </MenuItem>
+            <Separator Width="15" />
+            <MenuItem Header="Relatório" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
+        </Menu>
+
     </Grid>
 </Window>
