@@ -102,6 +102,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\frmAdicionarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmAdicionarEditora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\frmAdicionarObra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -129,13 +137,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606261939216_Inicial.cs" />
-    <Compile Include="Migrations\201606261939216_Inicial.Designer.cs">
-      <DependentUpon>201606261939216_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201607032151351_Inicial.cs" />
+    <Compile Include="Migrations\201607032151351_Inicial.Designer.cs">
+      <DependentUpon>201607032151351_Inicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607010017301_addTables.cs" />
-    <Compile Include="Migrations\201607010017301_addTables.Designer.cs">
-      <DependentUpon>201607010017301_addTables.cs</DependentUpon>
+    <Compile Include="Migrations\201607032205542_AlterTables.cs" />
+    <Compile Include="Migrations\201607032205542_AlterTables.Designer.cs">
+      <DependentUpon>201607032205542_AlterTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607032208581_AlterTables_v2.cs" />
+    <Compile Include="Migrations\201607032208581_AlterTables_v2.Designer.cs">
+      <DependentUpon>201607032208581_AlterTables_v2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607040111154_Update_Editora_Table.cs" />
+    <Compile Include="Migrations\201607040111154_Update_Editora_Table.Designer.cs">
+      <DependentUpon>201607040111154_Update_Editora_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607040143539_Update_Obra_Table.cs" />
+    <Compile Include="Migrations\201607040143539_Update_Obra_Table.Designer.cs">
+      <DependentUpon>201607040143539_Update_Obra_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607050257017_Update_Cliente_table.cs" />
+    <Compile Include="Migrations\201607050257017_Update_Cliente_table.Designer.cs">
+      <DependentUpon>201607050257017_Update_Cliente_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607050417010_Update_Cliente_Table_v2.cs" />
+    <Compile Include="Migrations\201607050417010_Update_Cliente_Table_v2.Designer.cs">
+      <DependentUpon>201607050417010_Update_Cliente_Table_v2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Autor.cs" />
@@ -145,6 +173,12 @@
     <Compile Include="Models\Obra.cs" />
     <Compile Include="Views\frmAdicionarAutor.xaml.cs">
       <DependentUpon>frmAdicionarAutor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmAdicionarCliente.xaml.cs">
+      <DependentUpon>frmAdicionarCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmAdicionarEditora.xaml.cs">
+      <DependentUpon>frmAdicionarEditora.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\frmAdicionarObra.xaml.cs">
       <DependentUpon>frmAdicionarObra.xaml</DependentUpon>
@@ -174,11 +208,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201606261939216_Inicial.resx">
-      <DependentUpon>201606261939216_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607032151351_Inicial.resx">
+      <DependentUpon>201607032151351_Inicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607010017301_addTables.resx">
-      <DependentUpon>201607010017301_addTables.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607032205542_AlterTables.resx">
+      <DependentUpon>201607032205542_AlterTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607032208581_AlterTables_v2.resx">
+      <DependentUpon>201607032208581_AlterTables_v2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607040111154_Update_Editora_Table.resx">
+      <DependentUpon>201607040111154_Update_Editora_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607040143539_Update_Obra_Table.resx">
+      <DependentUpon>201607040143539_Update_Obra_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607050257017_Update_Cliente_table.resx">
+      <DependentUpon>201607050257017_Update_Cliente_table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607050417010_Update_Cliente_Table_v2.resx">
+      <DependentUpon>201607050417010_Update_Cliente_Table_v2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

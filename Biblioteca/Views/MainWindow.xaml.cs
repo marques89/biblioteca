@@ -55,5 +55,17 @@ namespace Biblioteca.Views
             frmAdicionarAutor frmAdicionarAutor = new frmAdicionarAutor();
             frmAdicionarAutor.ShowDialog();
         }
+
+        private void menuAdicionarEditora_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarEditora frmAdicionarEditora = new frmAdicionarEditora();
+            frmAdicionarEditora.ShowDialog();
+        }
+
+        private void menuAdicionarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarCliente frmAdicionarCliente = new frmAdicionarCliente();
+            frmAdicionarCliente.ShowDialog();
+        }
     }
 }
