@@ -5,45 +5,25 @@
     <Grid>
         <Menu HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="517" Background="#FFBBB4B4">
             <Separator Width="15" />
-            <MenuItem Header="Obra" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Right" HorizontalAlignment="Center" >
-                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140">
-                    <MenuItem x:Name="menuPesquisarObra" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuAdicionarObra" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarObra_Click"/>
-                    <MenuItem x:Name="menuAlterarObra" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuRemoverObra" Header="Remover" HorizontalAlignment="Left" Width="140"/>
-                </MenuItem>
-                <MenuItem Header="Retirada" HorizontalAlignment="Left" Width="140"/>
-                <MenuItem Header="Devolução" HorizontalAlignment="Left" Width="140"/>
+            <MenuItem  x:Name="menuCadastro" Header="Cadastro" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Right" HorizontalAlignment="Center" >
+                <MenuItem x:Name="menuAutor" Header="Autor" HorizontalAlignment="Left" Width="140" Click="menuAutor_Click"/>
+                <MenuItem x:Name="menuEditora" Header="Editora" HorizontalAlignment="Left" Width="140" Click="menuEditora_Click"/>
+                <MenuItem x:Name="menuObra" Header="Obra" HorizontalAlignment="Left" Width="140" Click="menuObra_Click"/>
+                <MenuItem x:Name="menuCliente" Header="Cliente" HorizontalAlignment="Left" Width="140" Click="menuCliente_Click"/>
             </MenuItem>
             <Separator Width="15" />
-            <MenuItem Header="Autor" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
-                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140">
-                    <MenuItem x:Name="menuPesquisarAutor" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuAdicionarAutor" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarAutor_Click"/>
-                    <MenuItem x:Name="menuAlterarAutor" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuRemoverAutor" Header="Remover" HorizontalAlignment="Left" Width="140"/>
-                </MenuItem>
+            <MenuItem Header="Empréstimo" Height="24" Width="80" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <MenuItem x:Name="menuEmprestimoNovo" Header="Novo" HorizontalAlignment="Left" Width="140" Click="menuEmprestimoNovo_Click"/>                   
             </MenuItem>
             <Separator Width="15" />
-            <MenuItem Header="Editora" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
-                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140" VerticalAlignment="Top">
-                    <MenuItem x:Name="menuPesquisarEditora" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuAdicionarEditora" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarCliente_Click"/>
-                    <MenuItem x:Name="menuAlterarEditora" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuRemoverEditora" Header="Remover" HorizontalAlignment="Left" Width="140"/>
-                </MenuItem>
+            <MenuItem x:Name="menuDevolucao" Header="Devolução" Height="24" Width="80" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <MenuItem x:Name="menuDevolucaoNovo" Header="Novo" HorizontalAlignment="Left" Width="140" Click="menuDevolucaoNovo_Click"/>
             </MenuItem>
             <Separator Width="15" />
-            <MenuItem Header="Cliente" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
-                <MenuItem Header="Gestão" HorizontalAlignment="Left" Width="140" VerticalAlignment="Top">
-                    <MenuItem x:Name="menuPesquisarCliente" Header="Pesquisar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuAdicionarCliente" Header="Adicionar" HorizontalAlignment="Left" Width="140" Click="menuAdicionarCliente_Click"/>
-                    <MenuItem x:Name="menuAlterarCliente" Header="Alterar" HorizontalAlignment="Left" Width="140"/>
-                    <MenuItem x:Name="menuRemoverCliente" Header="Remover" HorizontalAlignment="Left" Width="140"/>
-                </MenuItem>
+            <MenuItem x:Name="menuRelatorio" Header="Relatório" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" >
+                <MenuItem x:Name="menuObrasDisponiveis" Header="Obras Disponíveis" HorizontalAlignment="Left" Width="190" Click="menuObrasDisponiveis_Click"/>
+                <MenuItem x:Name="menuObrasEmprestadas" Header="Obras Emprestadas" HorizontalAlignment="Left" Width="190" Click="menuObrasEmprestadas_Click"/>
             </MenuItem>
-            <Separator Width="15" />
-            <MenuItem Header="Relatório" Height="24" Width="60" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
         </Menu>
 
     </Grid>

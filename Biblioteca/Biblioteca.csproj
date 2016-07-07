@@ -49,11 +49,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -106,11 +108,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\frmAdicionarDevolucao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\frmAdicionarEditora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\frmAdicionarEmprestimo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\frmAdicionarObra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmRemoverAutor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmRemoverCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\frmRemoverEditora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -125,45 +147,22 @@
     <Compile Include="DAL\AutorDAO.cs" />
     <Compile Include="DAL\ClienteDAO.cs" />
     <Compile Include="DAL\EditoraDAO.cs" />
+    <Compile Include="DAL\EmprestimoDAO.cs" />
     <Compile Include="DAL\ObraDAO.cs" />
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\Singleton.cs" />
-    <Compile Include="DataSet\DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <Compile Include="DataSetBiblioteca.cs">
+      <DependentUpon>DataSetBiblioteca.xsd</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataSet\DataSet1.Designer.cs">
+    <Compile Include="DataSetBiblioteca.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DependentUpon>DataSetBiblioteca.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201607032151351_Inicial.cs" />
-    <Compile Include="Migrations\201607032151351_Inicial.Designer.cs">
-      <DependentUpon>201607032151351_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607032205542_AlterTables.cs" />
-    <Compile Include="Migrations\201607032205542_AlterTables.Designer.cs">
-      <DependentUpon>201607032205542_AlterTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607032208581_AlterTables_v2.cs" />
-    <Compile Include="Migrations\201607032208581_AlterTables_v2.Designer.cs">
-      <DependentUpon>201607032208581_AlterTables_v2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607040111154_Update_Editora_Table.cs" />
-    <Compile Include="Migrations\201607040111154_Update_Editora_Table.Designer.cs">
-      <DependentUpon>201607040111154_Update_Editora_Table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607040143539_Update_Obra_Table.cs" />
-    <Compile Include="Migrations\201607040143539_Update_Obra_Table.Designer.cs">
-      <DependentUpon>201607040143539_Update_Obra_Table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607050257017_Update_Cliente_table.cs" />
-    <Compile Include="Migrations\201607050257017_Update_Cliente_table.Designer.cs">
-      <DependentUpon>201607050257017_Update_Cliente_table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201607050417010_Update_Cliente_Table_v2.cs" />
-    <Compile Include="Migrations\201607050417010_Update_Cliente_Table_v2.Designer.cs">
-      <DependentUpon>201607050417010_Update_Cliente_Table_v2.cs</DependentUpon>
+    <Compile Include="Migrations\201607070213026_Inicial.cs" />
+    <Compile Include="Migrations\201607070213026_Inicial.Designer.cs">
+      <DependentUpon>201607070213026_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Autor.cs" />
@@ -177,17 +176,38 @@
     <Compile Include="Views\frmAdicionarCliente.xaml.cs">
       <DependentUpon>frmAdicionarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmAdicionarDevolucao.xaml.cs">
+      <DependentUpon>frmAdicionarDevolucao.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmAdicionarEditora.xaml.cs">
       <DependentUpon>frmAdicionarEditora.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmAdicionarEmprestimo.xaml.cs">
+      <DependentUpon>frmAdicionarEmprestimo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\frmAdicionarObra.xaml.cs">
       <DependentUpon>frmAdicionarObra.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmRelatorio.cs">
+    <Compile Include="Views\frmObrasDisponiveis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmRelatorio.Designer.cs">
-      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    <Compile Include="Views\frmObrasDisponiveis.Designer.cs">
+      <DependentUpon>frmObrasDisponiveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmObrasEmprestadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmObrasEmprestadas.Designer.cs">
+      <DependentUpon>frmObrasEmprestadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmRemoverAutor.xaml.cs">
+      <DependentUpon>frmRemoverAutor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmRemoverCliente.xaml.cs">
+      <DependentUpon>frmRemoverCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmRemoverEditora.xaml.cs">
+      <DependentUpon>frmRemoverEditora.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -208,48 +228,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201607032151351_Inicial.resx">
-      <DependentUpon>201607032151351_Inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607032205542_AlterTables.resx">
-      <DependentUpon>201607032205542_AlterTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607032208581_AlterTables_v2.resx">
-      <DependentUpon>201607032208581_AlterTables_v2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607040111154_Update_Editora_Table.resx">
-      <DependentUpon>201607040111154_Update_Editora_Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607040143539_Update_Obra_Table.resx">
-      <DependentUpon>201607040143539_Update_Obra_Table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607050257017_Update_Cliente_table.resx">
-      <DependentUpon>201607050257017_Update_Cliente_table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201607050417010_Update_Cliente_Table_v2.resx">
-      <DependentUpon>201607050417010_Update_Cliente_Table_v2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201607070213026_Inicial.resx">
+      <DependentUpon>201607070213026_Inicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmRelatorio.resx">
-      <DependentUpon>frmRelatorio.cs</DependentUpon>
+    <EmbeddedResource Include="Views\frmObrasDisponiveis.resx">
+      <DependentUpon>frmObrasDisponiveis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Report1.rdlc" />
-    <EmbeddedResource Include="Views\Report2.rdlc" />
-    <None Include="DataSet\DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <EmbeddedResource Include="Views\frmObrasEmprestadas.resx">
+      <DependentUpon>frmObrasEmprestadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\rvObrasIndisponiveis.rdlc" />
+    <EmbeddedResource Include="Views\rvObrasDiponiveis.rdlc" />
+    <None Include="DataSetBiblioteca.xsc">
+      <DependentUpon>DataSetBiblioteca.xsd</DependentUpon>
     </None>
-    <None Include="DataSet\DataSet1.xsd">
+    <None Include="DataSetBiblioteca.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetBiblioteca.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSet\DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="DataSetBiblioteca.xss">
+      <DependentUpon>DataSetBiblioteca.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Biblioteca.Models.Autor.datasource" />
+    <None Include="Properties\DataSources\Biblioteca.Models.Cliente.datasource" />
+    <None Include="Properties\DataSources\Biblioteca.Models.Editora.datasource" />
+    <None Include="Properties\DataSources\Biblioteca.Models.Emprestimo.datasource" />
+    <None Include="Properties\DataSources\Biblioteca.Models.Obra.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -276,6 +286,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

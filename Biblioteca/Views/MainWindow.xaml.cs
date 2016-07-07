@@ -43,29 +43,57 @@ namespace Biblioteca.Views
                 e.Cancel = true;
             }
         }
-
-        private void menuAdicionarObra_Click(object sender, RoutedEventArgs e)
+        
+        
+        private void menuObrasDisponiveis_Click(object sender, RoutedEventArgs e)
         {
-            frmAdicionarObra frmAdicionarObra = new frmAdicionarObra();
-            frmAdicionarObra.ShowDialog();
+            frmObrasDisponiveis frmObrasDisponiveis = new frmObrasDisponiveis();
+            frmObrasDisponiveis.ShowDialog();
         }
 
-        private void menuAdicionarAutor_Click(object sender, RoutedEventArgs e)
+        private void menuObrasEmprestadas_Click(object sender, RoutedEventArgs e)
+        {
+            frmObrasEmprestadas frmObrasEmprestadas = new frmObrasEmprestadas();
+            frmObrasEmprestadas.ShowDialog();
+        }
+
+        private void menuAutor_Click(object sender, RoutedEventArgs e)
         {
             frmAdicionarAutor frmAdicionarAutor = new frmAdicionarAutor();
             frmAdicionarAutor.ShowDialog();
         }
 
-        private void menuAdicionarEditora_Click(object sender, RoutedEventArgs e)
+        private void menuEditora_Click(object sender, RoutedEventArgs e)
         {
             frmAdicionarEditora frmAdicionarEditora = new frmAdicionarEditora();
             frmAdicionarEditora.ShowDialog();
         }
 
-        private void menuAdicionarCliente_Click(object sender, RoutedEventArgs e)
+        private void menuObra_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarObra frmAdicionarObra = new frmAdicionarObra();
+            frmAdicionarObra.ShowDialog();
+        }
+
+        private void menuCliente_Click(object sender, RoutedEventArgs e)
         {
             frmAdicionarCliente frmAdicionarCliente = new frmAdicionarCliente();
             frmAdicionarCliente.ShowDialog();
         }
-    }
+
+        private void menuEmprestimoNovo_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarEmprestimo frmAdicionarEmprestimo = new frmAdicionarEmprestimo();
+            frmAdicionarEmprestimo.ShowDialog();
+            
+        }
+
+        private void menuDevolucaoNovo_Click(object sender, RoutedEventArgs e)
+        {
+            frmAdicionarDevolucao frmAdicionarDevolucao = new frmAdicionarDevolucao();
+            frmAdicionarDevolucao.ShowDialog();
+        }
+
+
+     }
 }

@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>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</value>
-  </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
-  </data>
+  <metadata name="tabObrasIndisponiveisBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>163, 17</value>
+  </metadata>
+  <metadata name="dataSetBiblioteca.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="tabObrasIndisponiveisTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>414, 17</value>
+  </metadata>
 </root>
