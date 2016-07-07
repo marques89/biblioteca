@@ -7,13 +7,13 @@ namespace Biblioteca.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Update_Editora_Table : IMigrationMetadata
+    public sealed partial class Update_all_tables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Update_Editora_Table));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Update_all_tables));
         
         string IMigrationMetadata.Id
         {
-            get { return "201607040111154_Update_Editora_Table"; }
+            get { return "201607062304481_Update_all_tables"; }
         }
         
         string IMigrationMetadata.Source
