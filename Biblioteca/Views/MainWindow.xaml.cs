@@ -43,7 +43,7 @@ namespace Biblioteca.Views
                 e.Cancel = true;
             }
         }
-        
+
         
         private void menuObrasDisponiveis_Click(object sender, RoutedEventArgs e)
         {
@@ -95,5 +95,5 @@ namespace Biblioteca.Views
         }
 
 
-     }
+    }
 }
